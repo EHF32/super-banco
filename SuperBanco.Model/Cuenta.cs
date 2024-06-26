@@ -2,7 +2,7 @@
 
 public class Cuenta
 {
-    public int Id { get; set; }
+    public int CuentaId { get; set; }
     public string UsuarioId { get; set; }
     public string IBAN { get; set; }
     public decimal Saldo { get; set; }

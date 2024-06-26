@@ -9,8 +9,7 @@ namespace SuperBanco.Model;
 public class Movimiento
 {
 
-    public int MovimientoID { get; set; }
-    public int OperacionID { get; set; }
+    public int MovimientoId { get; set; }
     public TipoOperacion Tipo { get; set; }
     public DateTime Fecha { get; set; }
     public decimal Monto { get; set; }

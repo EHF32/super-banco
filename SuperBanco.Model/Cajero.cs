@@ -8,7 +8,7 @@ namespace SuperBanco.Model;
 
 public class Cajero
 {
-    public int CajeroID { get; set; }
+    public int CajeroId { get; set; }
     public string Ubicacion { get; set; }
     public bool EsExterno { get; set; }
 
