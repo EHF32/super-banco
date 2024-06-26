@@ -14,7 +14,7 @@ public class Movimiento
     public DateTime Fecha { get; set; }
     public decimal Monto { get; set; }
     public string Descripcion { get; set; }
-    public string CuentaDestinoIBAN { get; set; }
+    public string? CuentaDestinoIBAN { get; set; }
     public decimal? Comision { get; set; }
 
     public Tarjeta Tarjeta { get; set; }

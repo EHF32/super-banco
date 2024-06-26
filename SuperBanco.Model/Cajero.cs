@@ -10,7 +10,8 @@ public class Cajero
 {
     public int CajeroId { get; set; }
     public string Ubicacion { get; set; }
-    public bool EsExterno { get; set; }
+    public bool EsExterno { get; set; } 
+    public decimal? Comisiones { get; set; }
 
     public List<Movimiento> Movimientos { get; set; }
 }

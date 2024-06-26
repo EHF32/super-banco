@@ -7,6 +7,9 @@ namespace SuperBanco.DAL;
 public class SuperBancoDbContext : DbContext
 {
     public DbSet<Cuenta> Cuentas { get; set; }
+    public DbSet<Tarjeta> Tarjetas { get; set; }
+    public DbSet<Movimiento> Movimientos { get; set; }
+    public DbSet<Cajero> Cajeros { get; set; }
 
     public string DbPath { get; }
 

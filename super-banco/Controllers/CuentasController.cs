@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using super_banco.Extensions;
 using SuperBanco.DAL;
-using SuperBanco.DAL.Repositories;
+using SuperBanco.DAL.Repositories.Interfaces;
 using SuperBanco.Model;
 
 namespace SuperBanco.Api.Controllers;
@@ -12,8 +12,8 @@ namespace SuperBanco.Api.Controllers;
 [Route("[controller]")]
 public class CuentasController(ILogger<CuentasController> logger, IMovimientoRepository movimientoRepository) : SuperBancoBaseController
 {
-    [HttpGet(Name = "ConsultarMovimientos/{Iban}")]
-    public async Task<IEnumerable<Movimiento>> Consultar([FromQuery] string iban)
+    [HttpGet("ConsultarMovimientos/{iban}")]
+    public async Task<IEnumerable<Movimiento>> Consultar(string iban)
     {
         return await movimientoRepository.ObtenerMovimientos(iban, GetUserId());
     }

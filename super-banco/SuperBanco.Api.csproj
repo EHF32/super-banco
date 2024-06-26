@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SuperBanco.Contracts\SuperBanco.Contracts.csproj" />
     <ProjectReference Include="..\SuperBanco.DAL\SuperBanco.DAL.csproj" />
     <ProjectReference Include="..\SuperBanco.Model\SuperBanco.Model.csproj" />
   </ItemGroup>

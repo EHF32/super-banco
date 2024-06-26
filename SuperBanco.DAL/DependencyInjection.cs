@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SuperBanco.DAL.Repositories;
+using SuperBanco.DAL.Repositories.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,9 @@ public static class DependencyInjection
         services.AddDbContext<SuperBancoDbContext>();
 
         services.AddScoped<IMovimientoRepository, MovimientoRepository>();
-
-        //services.AddScoped<ICajeroRepository, CajeroRepository>();
+        services.AddScoped<ITarjetaRepository, TarjetaRepository>(); 
+        services.AddScoped<ICajeroRepository, CajeroRepository>();
         //services.AddScoped<ICuentaRepository, CuentaRepository>();
-        //services.AddScoped<ITarjetaRepository, TarjetaRepository>();
     }
 
 }

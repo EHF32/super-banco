@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuperBanco.DAL;
 
@@ -10,9 +11,11 @@ using SuperBanco.DAL;
 namespace SuperBanco.DAL.Migrations
 {
     [DbContext(typeof(SuperBancoDbContext))]
-    partial class SuperBancoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240626075938_AjustadoModelo")]
+    partial class AjustadoModelo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.6");
@@ -73,6 +76,7 @@ namespace SuperBanco.DAL.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CuentaDestinoIBAN")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<int?>("CuentaId")

@@ -1,6 +1,6 @@
 ﻿using SuperBanco.Model;
 
-namespace SuperBanco.DAL.Repositories;
+namespace SuperBanco.DAL.Repositories.Interfaces;
 
 public interface IMovimientoRepository
 {
