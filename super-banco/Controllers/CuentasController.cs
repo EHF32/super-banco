@@ -3,20 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using super_banco.Extensions;
 using SuperBanco.DAL;
+using SuperBanco.DAL.Repositories;
 using SuperBanco.Model;
 
-namespace super_banco.Controllers;
+namespace SuperBanco.Api.Controllers;
 
-[Authorize]
 [ApiController]
 [Route("[controller]")]
-public class CuentasController(ILogger<CuentasController> logger, SuperBancoDbContext superBancoDb) : ControllerBase
-{ 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public async Task<IEnumerable<Cuenta>> Consultar()
+public class CuentasController(ILogger<CuentasController> logger, IMovimientoRepository movimientoRepository) : SuperBancoBaseController
+{
+    [HttpGet(Name = "ConsultarMovimientos/{Iban}")]
+    public async Task<IEnumerable<Movimiento>> Consultar([FromQuery] string iban)
     {
-        var a = HttpContext.GetUserId();
-
-        return await superBancoDb.Cuentas.ToListAsync();
+        return await movimientoRepository.ObtenerMovimientos(iban, GetUserId());
     }
 }
