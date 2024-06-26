@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SuperBanco.DAL.Repositories.Interfaces;
 using SuperBanco.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SuperBanco.DAL.Repositories;
 

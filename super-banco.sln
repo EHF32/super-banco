@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperBanco.Api", "super-banco\SuperBanco.Api.csproj", "{0260A633-4F71-4318-B6E7-A365D380F836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperBanco.Api", "SuperBanco.Api\SuperBanco.Api.csproj", "{0260A633-4F71-4318-B6E7-A365D380F836}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperBanco.Model", "SuperBanco.Model\SuperBanco.Model.csproj", "{E123C81C-E9C4-4157-8F69-CFBD08C02401}"
 EndProject
