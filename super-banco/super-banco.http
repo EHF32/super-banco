@@ -1,0 +1,6 @@
+@super_banco_HostAddress = http://localhost:5144
+
+GET {{super_banco_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
